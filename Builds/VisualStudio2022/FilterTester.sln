@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 17
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterTester - Standalone Plugin", "FilterTester_StandalonePlugin.vcxproj", "{112A16E8-A0F2-C228-6BEA-21658BA9D15B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2} = {9021CECC-00D5-0DD2-1795-48A59B59ACB2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterTester - VST3", "FilterTester_VST3.vcxproj", "{748140C3-8051-75E4-194E-E4230E6A2110}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2} = {9021CECC-00D5-0DD2-1795-48A59B59ACB2}
+		{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F} = {DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterTester - Shared Code", "FilterTester_SharedCode.vcxproj", "{9021CECC-00D5-0DD2-1795-48A59B59ACB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterTester - VST3 Manifest Helper", "FilterTester_VST3ManifestHelper.vcxproj", "{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{748140C3-8051-75E4-194E-E4230E6A2110}.Debug|x64.ActiveCfg = Debug|x64
+		{748140C3-8051-75E4-194E-E4230E6A2110}.Debug|x64.Build.0 = Debug|x64
+		{748140C3-8051-75E4-194E-E4230E6A2110}.Release|x64.ActiveCfg = Release|x64
+		{748140C3-8051-75E4-194E-E4230E6A2110}.Release|x64.Build.0 = Release|x64
+		{112A16E8-A0F2-C228-6BEA-21658BA9D15B}.Debug|x64.ActiveCfg = Debug|x64
+		{112A16E8-A0F2-C228-6BEA-21658BA9D15B}.Debug|x64.Build.0 = Debug|x64
+		{112A16E8-A0F2-C228-6BEA-21658BA9D15B}.Release|x64.ActiveCfg = Release|x64
+		{112A16E8-A0F2-C228-6BEA-21658BA9D15B}.Release|x64.Build.0 = Release|x64
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2}.Debug|x64.ActiveCfg = Debug|x64
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2}.Debug|x64.Build.0 = Debug|x64
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2}.Release|x64.ActiveCfg = Release|x64
+		{9021CECC-00D5-0DD2-1795-48A59B59ACB2}.Release|x64.Build.0 = Release|x64
+		{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}.Debug|x64.ActiveCfg = Debug|x64
+		{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}.Debug|x64.Build.0 = Debug|x64
+		{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}.Release|x64.ActiveCfg = Release|x64
+		{DE4B4812-C45D-59CB-3C03-B46CFF9E6D7F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
