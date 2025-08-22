@@ -1,0 +1,1 @@
+This is a lightweight implementation of a second order lowpass filter, realized using Direct Form I and Direct Form II. It is designed for use in the JUCE framework, but is easily adaptible for other frameworks and use cases.
