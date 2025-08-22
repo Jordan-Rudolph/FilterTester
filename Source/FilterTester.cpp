@@ -9,7 +9,7 @@
 */
 
 #include "FilterTester.h"
-#define J_2PI juce::MathConstants<float>::twoPi
+#define J_2PI juce::MathConstants<float>::twoPi //Define J_2PI for convenience and readability
 
 void JLPFilter::processBuffer(juce::AudioBuffer<float>& buffer)
 {
@@ -58,8 +58,6 @@ float JLPFilter::processSampleDFI(float sample, int channel) {
 }
 
 float JLPFilter::processSampleDFII(float sample, int channel) {
-    //Calculate filter coefficients
-    
 
     //Add the new sample to the input buffer
 
@@ -69,14 +67,17 @@ float JLPFilter::processSampleDFII(float sample, int channel) {
         - (dfiiBuffer[channel][0] * a_1) //Here, index 0 refers to the previous v(n)
         - (dfiiBuffer[channel][1] * a_2);
 
+	//Divide by a_0 to normalize the output
     output /= a_0;
 
     float temp = (dfiiBuffer[channel][0] * b_1)
-        + (dfiiBuffer[channel][1] * b_2); //This is the second half of the filter graph
+		+ (dfiiBuffer[channel][1] * b_2); //This is the second half of the filter graph, which has to be calculated 
+                                          //before the output is pushed to the buffer
 
     dfiiBuffer[channel].push(output);
 
-    output *= b_0;
+    //Scale the output by b_0, and add the second half of the filter graph
+	output *= b_0; 
 
     output += temp;
 
